@@ -1,11 +1,10 @@
 import type { NextConfig } from "next";
-import webpack from "webpack";
 
 const nextConfig: NextConfig = {
   // Allow webpack config in Next.js 16 (Turbopack default)
   turbopack: {},
 
-  webpack: (config, { isServer }) => {
+  webpack: (config, { isServer, webpack }) => {
     // Polyfill for Node.js globals in browser
     if (!isServer) {
       config.resolve.fallback = {
@@ -16,6 +15,7 @@ const nextConfig: NextConfig = {
         crypto: false,
         stream: false,
         buffer: require.resolve('buffer/'),
+        '@react-native-async-storage/async-storage': false,
       };
 
       // Define global variables properly
