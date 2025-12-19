@@ -2,6 +2,9 @@ import type { NextConfig } from "next";
 import webpack from "webpack";
 
 const nextConfig: NextConfig = {
+  // Allow webpack config in Next.js 16 (Turbopack default)
+  turbopack: {},
+
   webpack: (config, { isServer }) => {
     // Polyfill for Node.js globals in browser
     if (!isServer) {
