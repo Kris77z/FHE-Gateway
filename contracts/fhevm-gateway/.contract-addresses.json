@@ -1,0 +1,20 @@
+{
+  "network": "base-sepolia",
+  "chainId": 84532,
+  "deployer": "0x36977434c75c0a9CC221E1C2EF1C475D272f0941",
+  "contracts": {
+    "FHEPaymentGateway": {
+      "address": "0x21834a2D140C4A2Ba31E88f1abF2e1E9b021625e",
+      "explorer": "https://sepolia.basescan.org/address/0x21834a2D140C4A2Ba31E88f1abF2e1E9b021625e",
+      "deployedAt": "2024-12-17",
+      "status": "deployed"
+    },
+    "FHECounter": {
+      "address": "0x9104651690Fe3dcFfdD3c3972C42AE9a710C0748",
+      "explorer": "https://sepolia.basescan.org/address/0x9104651690Fe3dcFfdD3c3972C42AE9a710C0748",
+      "deployedAt": "2024-12-17",
+      "status": "deployed"
+    }
+  }
+}
+

@@ -1,0 +1,115 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 34 33% 90%;
+    --foreground: 20 14% 4%;
+    --retro-orange: 24 95% 58%;
+    --retro-border: #000000;
+  }
+}
+
+body {
+  background-color: hsl(var(--background));
+  background-image: radial-gradient(#0000001a 1px, transparent 1px);
+  background-size: 20px 20px;
+  font-family: 'Courier New', Courier, monospace;
+  color: #000;
+}
+
+.retro-card {
+  background: white;
+  border: 4px solid var(--retro-border);
+  box-shadow: 8px 8px 0px 0px rgba(0, 0, 0, 1);
+  image-rendering: pixelated;
+}
+
+.retro-button {
+  background: black;
+  color: white;
+  border: 2px solid black;
+  box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.3);
+  transition: all 0.1s;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+/* Fix hover state for buttons */
+.retro-button:hover {
+  background: #333;
+  /* Dark gray instead of default white/transparent */
+  color: white !important;
+  box-shadow: 6px 6px 0px 0px rgba(0, 0, 0, 0.4);
+}
+
+.retro-button.bg-orange-500:hover {
+  background: #ea580c;
+  /* Darker orange */
+  color: black !important;
+}
+
+.retro-button.bg-blue-500:hover {
+  background: #2563eb;
+  /* Darker blue */
+  color: white !important;
+}
+
+.retro-button:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.3);
+}
+
+/* Custom scrollbar for terminal */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #000;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #444;
+  border: 2px solid #000;
+}
+
+.retro-input {
+  border: 4px solid black;
+  background: white;
+  font-family: monospace;
+  font-weight: bold;
+}
+
+.pixel-text {
+  letter-spacing: -1px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.terminal-window {
+  background: #111;
+  color: #a0a0a0;
+  border: 4px solid black;
+  box-shadow: 8px 8px 0px 0px rgba(0, 0, 0, 1);
+}
+
+@keyframes scanline {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+.scanline {
+  width: 100%;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.05);
+  position: absolute;
+  animation: scanline 8s linear infinite;
+  pointer-events: none;
+}

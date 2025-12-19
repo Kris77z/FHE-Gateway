@@ -1,0 +1,36 @@
+{
+  "name": "x402-fhe-gateway-evm",
+  "version": "0.1.0",
+  "description": "x402 + FHE Gateway for EVM networks",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "contracts/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace=apps/web",
+    "build": "npm run build --workspaces",
+    "test": "npm run test --workspaces",
+    "lint": "npm run lint --workspaces"
+  },
+  "keywords": [
+    "x402",
+    "fhe",
+    "evm",
+    "homomorphic-encryption",
+    "gasless-payments"
+  ],
+  "author": "",
+  "license": "MIT",
+  "resolutions": {
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "@types/react": "^19"
+  },
+  "overrides": {
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "@types/react": "^19"
+  }
+}
+

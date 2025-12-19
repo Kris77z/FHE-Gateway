@@ -1,0 +1,26 @@
+{
+  "name": "@x402-fhe-gateway/x402-client-evm",
+  "version": "0.1.0",
+  "description": "x402 client for EVM networks - can be used as frontend reference",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "start": "tsx src/index.ts",
+    "build": "tsc",
+    "test": "tsx src/index.ts"
+  },
+  "dependencies": {
+    "viem": "^2.21.26",
+    "dotenv": "^16.3.1"
+  },
+  "optionalDependencies": {
+    "x402-fetch": "file:../../reference/Base-x402/typescript/packages/x402-fetch"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.5",
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.3"
+  }
+}
+
